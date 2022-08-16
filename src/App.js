@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
+import { AiOutlineDollar } from "react-icons/ai";
+import { BsPersonCircle } from "react-icons/bs";
+import { useState } from "react";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Form.Label htmlFor="people">Tip Calculator</Form.Label>
+      <InputGroup className="mb-3">
+        <InputGroup.Text id="people">
+          <BsPersonCircle />
+        </InputGroup.Text>
+        <Form.Control
+          placeholder="People"
+          aria-label="people"
+          aria-describedby="people"
+        />
+      </InputGroup>
+      <InputGroup className="mb-3">
+        <InputGroup.Text id="bill">
+          <AiOutlineDollar />
+        </InputGroup.Text>
+        <Form.Control
+          placeholder="Bill Amount"
+          aria-label="Bill Amount"
+          aria-describedby="bill"
+        />
+      </InputGroup>
+      <InputGroup className="mb-3">
+        <InputGroup.Text id="tip">
+          <AiOutlineDollar />
+        </InputGroup.Text>
+        <Form.Control
+          placeholder="Tip Amount"
+          aria-label="Tip Amount"
+          aria-describedby="Tip"
+        />
+      </InputGroup>
+    </>
   );
 }
 
